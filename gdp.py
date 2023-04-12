@@ -34,7 +34,7 @@ y=gdp.reshape(-1,1)
 
 # chia ra thành test set và training set từ dữ liệu
 # có phần lấy để train (train set), phần còn lại test set (ẻeer kiểm tra)
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.5)
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.75)
 
 print(X_train)
 print(y_train)
@@ -53,5 +53,5 @@ for i in range(len(y_pred)):
 plt.hist(y_test - y_pred)
 plt.show()
 
-
-print(y_pred)
+for i in range(len(y_pred)):
+    print(str(X_test[i])+" : "+str(y_pred[i]))
